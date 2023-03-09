@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  
+<!-- notnini -->
 <html lang="es">
     <head>
         <meta charset="UTF-8">
@@ -23,19 +24,35 @@
         </section>
         <!-- Inicio Caja 2 -->
         <section id="caja2" class="ocultar">
-            <h2 class="titulo">caja2</h2>
+            <h2 class="titulo">Formularios</h2>
             <section class="opciones">
                 <form>
                     <ul>
-                        <li><input type="button" value="Clientes"></li>
-                        <li><input type ="button" value="Telefonos"></li>
-                        <li><input type="button" value="Portatiles"></li>
+                        <li><input type ="button" class="btn" value="Clientes"></li>
+                        <li><input type ="button" class="btn" value="Telefonos"></li>
+                        <li><input type ="button" class="btn" value="Portatiles"></li>
                     </ul>
                 </form>
                 <input type="button" class="btnCerrar" id="btnCerrar" value="Cerrar sesión">
             </section>
-            <section class="info">
 
+            <section id="btnCliente" class="ocultar">
+                <section>    
+                    <form>
+                        <ul>
+                            <li><input type="text" placeholder="Nombre"></li>
+                            <li><input type="text" placeholder="Documento"></li>
+                            <li><input type="text" placeholder="Celular"></li>
+                            <li><input type="text" placeholder="Dirección"></li>
+                            <li><input type="text" placeholder="Correo"></li>
+                        </ul>
+                    </form>
+                    <input type="button" id="btnFormularios" value="formularios">
+                </section>
+            </section>
+
+            <section class="info">
+                
             </section>
         </section>
         <script src="main.js"></script>
