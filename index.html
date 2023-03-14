@@ -15,7 +15,7 @@
         <section id="caja1" class="mostrar">
             <section id="main">
                 <h1>AGENCIA ZZ</h1> <br>
-            <form id="formulario">
+            <form id="formulario" class="formulario">
                 <input type="text" id="usuario" placeholder="Usuario"> <br> <br>
                 <input type="password" id="passw" placeholder="Contraseña"> <br> <br>
             </form>
@@ -23,36 +23,85 @@
             </section>
         </section>
         <!-- Inicio Caja 2 -->
-        <section id="caja2" class="ocultar">
-            <h2 class="titulo">Formularios</h2>
+        <section id="caja2" class="fondo" class="ocultar">
+            <h2 class="titulo"></h2>
             <section class="opciones">
-                <form>
+                <form class="formulario">
                     <ul>
-                        <li><input type ="button" class="btn" value="Clientes"></li>
-                        <li><input type ="button" class="btn" value="Telefonos"></li>
-                        <li><input type ="button" class="btn" value="Portatiles"></li>
+                        <li><input type ="button" id="btnCliente" value="Clientes"></li>
+                        <li><input type ="button" id="btnTelefono" value="Telefonos"></li>
+                        <li><input type ="button" id="btnPortatil" value="Portatiles"></li>
                     </ul>
                 </form>
                 <input type="button" class="btnCerrar" id="btnCerrar" value="Cerrar sesión">
             </section>
-
-            <section id="btnCliente" class="ocultar">
-                <section>    
-                    <form>
+            <!-- Inicio boton clientes -->
+            <section id="caja3" class="ocultar">
+                <section class="opciones">    
+                    <form class="formulario">
                         <ul>
-                            <li><input type="text" placeholder="Nombre"></li>
-                            <li><input type="text" placeholder="Documento"></li>
-                            <li><input type="text" placeholder="Celular"></li>
-                            <li><input type="text" placeholder="Dirección"></li>
-                            <li><input type="text" placeholder="Correo"></li>
+                            <li><input type="text" placeholder="Nombre" id="nombre"></li>
+                            <li><input type="text" placeholder="documento" id="documento"></li>
+                            <li><input type="text" placeholder="Celular" id="cel"></li>
+                            <li><input type="text" placeholder="Dirección" id="direccion"></li>
+                            <li><input type="text" placeholder="Correo" id="correo"></li>
                         </ul>
                     </form>
+                    <input type="button" id="enviarCliente" class="Enviar" value="Enviar">
                     <input type="button" id="btnFormularios" value="formularios">
                 </section>
             </section>
-
+            <!-- Inicio boton Telefonos -->
+            <section id="caja4" class="ocultar">
+                <section class="opciones">
+                    <form class="formulario">
+                        <ul>
+                            <li><input type="text" placeholder="Nombre"></li>
+                            <li><input type="text" placeholder="Referencia"></li>
+                            <li><input type="text" placeholder="Codigo"></li>
+                            <li><input type="text" placeholder="Valor"></li>
+                            <li><input type="text" placeholder="cantidad vendida"></li>
+                            <li><input type="url" placeholder="Imagen"></li> 
+                        </ul>
+                    </form>
+                    <input type="button" class="Enviar" value="Enviar">
+                    <input type="button" id="btnFormularios2" value="formularios">
+                </section>
+            </section>
+            <!-- Inicio boton portatiles -->
+            <section id="caja5" class="ocultar">
+                <section class="opciones">
+                    <form class="formulario">
+                        <ul>
+                            <li><input type="text" placeholder="Nombre"></li>
+                            <li><input type="text" placeholder="Referencia"></li>
+                            <li><input type="text" placeholder="Codigo"></li>
+                            <li><input type="text" placeholder="Valor"></li>
+                            <li><input type="text" placeholder="cantidad vendida"></li>
+                            <li><input type="url" placeholder="Imagen"></li> 
+                        </ul>
+                    </form>
+                    <input type="button" class="Enviar" value="Enviar">
+                    <input type="button" id="btnFormularios3" value="formularios">
+                </section>
+            </section>
+            <!-- Inicio cards -->
             <section class="info">
+                <!-- card cliente -->
+                <section id="card-cliente" class="ocultar">
                 
+                </section>
+                <!-- card Celular -->
+                <section id="card-telefono" class="ocultar">
+
+                </section>
+                <!-- card card-portatil -->
+                <section id="card-portatil" class="ocultar">
+
+                </section>
+
+            
+
             </section>
         </section>
         <script src="main.js"></script>

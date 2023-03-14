@@ -26,15 +26,48 @@ body{
     justify-content: center;
 }
 
-#caja2{
+.fondo{
     display: flex;
-    background: url(img/rajesh-kavasseri-_1uwiY_EzNw-unsplash.jpg) no-repeat;
+    background: url(img/andrew-kliatskyi-mKMfSaqZrMs-unsplash.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     height: 100vh;
     width: 100%;
     position: absolute;
     text-align: center;
+}
+
+#caja3{
+    display: flex;
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    border-right:5px solid;
+}
+
+#caja4{
+    display: flex;
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    border-right:5px solid;
+}
+
+#caja5{
+    display: flex;
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    border-right:5px solid;
 }
 
 .mostrar{
@@ -48,7 +81,16 @@ body{
 }
 
 .opciones{
-    /* background-color: chocolate; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    border-right:5px solid;
+}
+
+#opciones{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,6 +101,11 @@ body{
 }
 
 .opciones li {
+    margin-top: 20px;
+    list-style: none;
+}
+
+#opciones li {
     margin-top: 20px;
     list-style: none;
 }
@@ -93,18 +140,20 @@ body{
     width: 120px;
     cursor: pointer;
 }
-
-.info{
-    display: flex;
-    flex-direction: column;
+#caja2{
     background: url(img/pascal-bullan-A2B080gcRGc-unsplash.jpg) no-repeat;
     background-position: center;
     background-size: cover;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    
+    background-position: center;
+    background-size: cover; 
     width: 75%;
     height: 100%;
     text-align: center;
-    
-
 }
 
 .titulo {
@@ -120,7 +169,6 @@ body{
     margin: 50px;
     border-radius: 10%;
     border: 1px solid black;
-
 } 
 
 #formulario input{
@@ -137,7 +185,11 @@ body{
     color: black;
 }
 
-.btn{
+.formulario inpunt::placeholder{
+    color: #000000;
+}
+
+#btnPortatil{
     background-color: transparent;
     border: 1px solid #ffffff;
     padding: 10px;
@@ -148,13 +200,119 @@ body{
     cursor: pointer;
 }
 
-#btncliente{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 25%;
-    height: 100%;
-    border-right:5px solid;
+
+#btnTelefono{
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    margin-top: 20px;
+    width: 120px;
+    cursor: pointer;
+}
+
+#btnCliente{
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    margin-top: 20px;
+    width: 120px;
+    cursor: pointer;
+}
+
+#btnFormularios{
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    margin-top: 20px;
+    width: 120px;
+    cursor: pointer;
+}
+
+#btnFormularios2{
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    margin-top: 20px;
+    width: 120px;
+    cursor: pointer;
+}
+
+#btnFormularios3{
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    margin-top: 20px;
+    width: 120px;
+    cursor: pointer;
 }
     
+.Enviar{
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    margin-top: 20px;
+    width: 120px;
+    cursor: pointer;
+}
+
+#card-cliente{
+    display: flex;
+    margin-top: auto;
+    padding : auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    background-color: rgb(75, 57, 57);
+    border: radius 30%;
+
+}
+
+#nombreCliente{
+    padding: auto;
+    margin: auto
+}
+
+#documento{
+    padding: auto;
+    margin: auto
+}
+
+#cel{
+    padding: auto;
+    margin: auto
+}
+
+#direccion{
+    padding: auto;
+    margin: auto
+}
+
+#correo{
+    padding: auto;
+    margin: auto
+}
+
+#Enviar{
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    margin-top: 20px;
+    width: 120px;
+    cursor: pointer;
+}

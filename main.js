@@ -1,9 +1,10 @@
 const caja1 = document.querySelector('#caja1');
 const caja2 = document.querySelector('#caja2');
-const iniciar =document.querySelector("#iniciar");
 const usuario = document.querySelector('#usuario');
 const passw = document.querySelector('#passw');
 
+
+const iniciar =document.querySelector("#iniciar");
 
 iniciar.addEventListener("click", () => {  
 if(usuario.value === '' && passw.value === '')  {
@@ -27,84 +28,136 @@ cerrar.addEventListener("click", () => {
     caja1.classList.add("mostrar");
     caja2.classList.remove("mostrar");
     caja2.classList.add("ocultar");
+    cardCliente.classList.remove("mostrar");
+    cardCliente.classList.add("ocultar");
     formulario.reset();
 })
 
-const cliente = document.querySelector("Clientes");
+const cliente = document.querySelector("#btnCliente");
 
 cliente.addEventListener("click", () => {
 let opciones = document.querySelector("#opciones");
-let clientes = document.querySelector("#clientes");
-opciones.classList.remove("ocultar");
-opciones.classList.add("mostrar");
-clientes.classList.remove("mostrar");
-clientes.classList.add("ocultar");
+let caja3 = document.querySelector("#caja3");
+caja3.classList.remove("ocultar");
+caja3.classList.add("mostrar");
+opciones.classList.remove("mostrar");
+opciones.classList.add("ocultar");
+cardCliente.classList.remove("mostrar");
+cardCliente.classList.add("ocultar");
+formulario.reset();
 })
 
 const btnFormularios = document.querySelector("#btnFormularios");
 
 btnFormularios.addEventListener("click", () => {
 let opciones = document.querySelector("#opciones");
-let clientes = document.querySelector("#clientes");
-opciones.classList.remove("mostrar");
-opciones.classList.add("ocultar");
-clientes.classList.remove("ocultar");
-clientes.classList.add("mostrar");
+let caja3 = document.querySelector("#caja3");
+caja3.classList.remove("mostrar");
+caja3.classList.add("ocultar");
+opciones.classList.remove("ocultar");
+opciones.classList.add("mostrar");
+cardCliente.classList.remove("mostrar");
+cardCliente.classList.add("ocultar");
+formulario.reset();
 })
 
+const telefono = document.querySelector("#btnTelefono");
 
+telefono.addEventListener("click", () => {
+    let opciones = document.querySelector("#opciones");
+    let caja4 = document.querySelector("#caja4");
+    caja4.classList.remove("ocultar");
+    caja4.classList.add("mostrar");
+    opciones.classList.remove("mostrar");
+    opciones.classList.add("ocultar");
+    cardCliente.classList.remove("mostrar");
+    cardCliente.classList.add("ocultar");
+    formulario.reset();
+})
 
-/* const guardar_info_clientes = () =>{
-    let datos = []
-    let nombre = document.querySelector('nombre_cli').value 
-    datos[0]=nombre
-    let referencia = document.querySelector('documento_cli').value
-    datos[1]=referencia
-    let codigo = document.querySelector('celular_cli').value
-    datos[2]=codigo
-    let valor = document.querySelector('direccion_cli').value
-    datos[3]=valor
-    let cantidad = document.querySelector('correo_cli').value
-    datos[4]=cantidad
+const btnFormularios2 = document.querySelector("#btnFormularios2");
+btnFormularios2.addEventListener("click", () => {
+    let opciones = document.querySelector("#opciones");
+    let caja4 = document.querySelector("#caja4");
+    caja4.classList.remove("mostrar");
+    caja4.classList.add("ocultar");
+    opciones.classList.remove("ocultar");
+    opciones.classList.add("mostrar");
+    cardCliente.classList.remove("mostrar");
+    cardCliente.classList.add("ocultar");
+    formulario.reset();
+})
 
-    if(nombre == ""){
+const portatil = document.querySelector("#btnPortatil");
 
-    }else{
-        let div = document.createElement('div')
-        let section = document.querySelector('form_clientes')
-        let p = document.createElement('p')
-        let p2 = document.createElement('p')
-        let p3 = document.createElement('p')
-        let p4 = document.createElement('p')
-        let p5 = document.createElement('p')
+portatil.addEventListener("click", () => {
+    let opciones = document.querySelector("#opciones");
+    let caja5 = document.querySelector("#caja5");
+    caja5.classList.remove("ocultar");
+    caja5.classList.add("mostrar");
+    opciones.classList.remove("mostrar");
+    opciones.classList.add("ocultar");
+    cardCliente.classList.remove("mostrar");
+    cardCliente.classList.add("ocultar");
+    formulario.reset();
+
+})
+
+const btnFormularios3 = document.querySelector("#btnFormularios3");
+
+btnFormularios3.addEventListener("click", () => {
+    let opciones = document.querySelector("#opciones");
+    let caja5 = document.querySelector("#caja5");
+    caja5.classList.remove("mostrar");
+    caja5.classList.add("ocultar");
+    opciones.classList.remove("ocultar");
+    opciones.classList.add("mostrar");
+    cardCliente.classList.remove("mostrar");
+    cardCliente.classList.add("ocultar");
+    formulario.reset();
+})
+
+const enviarCliente = document.querySelector("#enviarCliente");
+
+enviarCliente.addEventListener('click', () => {
+
+    let nombreCliente = document.querySelector("#nombre");
+    let documento = document.querySelector("#documento");
+    let cel = document.querySelector("#cel");
+    let direccion = document.querySelector("#direccion");
+    let correo = document.querySelector("#correo");
+    let cardCliente = document.querySelector("#card-cliente");
+
+    cliente.classList.add("mostrar");
+    cliente.classList.remove("ocultar");
+
+    let cards =
+    
+    `
+        <img src="img/user.png" width="auto" height="150px">
         
-        div.className = 'card'
-        p.textContent = "Nombre: " + nombre
-        p2.textContent = "Documento: " + referencia
-        p3.textContent = "Celular: " + codigo
-        p4.textContent = "Direccion: " + valor
-        p5.textContent = "Correo: " + cantidad
-        
-        section.append(div)
-        div.append(p)
-        div.append(p2)
-        div.append(p3)
-        div.append(p4)
-        div.append(p5)
+        <h1 class="titulo">${nombreCliente.value}</h1>
+        <section class="container-interno">
 
-    } 
-}
-
-btn_form_clientes.addEventListener('click',guardar_info_clientes)
-
-function vaciar_clientes(){
-let nombre = document.querySelector('nombre_cli').value = ""
-let referencia = document.querySelector('documento_cli').value =""
-let codigo = document.querySelector('celular_cli').value = ""
-let valor = document.querySelector('direccion_cli').value = ""
-let cantidad = document.querySelector('correo_cli').value = ""
-} */
-
-
-
-
+            <section class="info">
+                    <h2>Documento</h2>
+                    <h1>${documento.value}</h1>
+            </section>
+            <section class="info">
+                    <h2>Celular</h2>
+                    <h1>${cel.value}</h1>
+            </section>
+            <section class="info">
+                    <h2>Direccion</h2>
+                    <h1>${direccion.value}</h1>
+            </section>
+                <section class="info">
+                    <h2>Correo</h2>
+                <h1>${correo.value}</h1>
+            </section>
+        </section>
+    `;
+    cardCliente.innerHTML = cards;
+    cardCliente.classList.add("mostrar");
+    cardCliente.classList.remove("ocultar");
+})
